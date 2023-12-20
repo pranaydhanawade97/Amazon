@@ -1,0 +1,39 @@
+package Page_Object;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class TestCases4 {
+	
+	WebDriver Driver;
+	
+	public TestCases4(WebDriver Driver) {
+		this.Driver=Driver;
+		
+		PageFactory.initElements(Driver, this);
+	}
+	
+	@FindBy(linkText="Your Account")
+	WebElement account;
+	
+	@FindBy(linkText="Your Orders")
+	WebElement Orders;
+	
+	
+	
+	public void Login5function() {
+		
+		account.click();
+		Orders.click();
+		
+		Driver.navigate().back();
+	}
+	
+	
+	
+	
+	
+}

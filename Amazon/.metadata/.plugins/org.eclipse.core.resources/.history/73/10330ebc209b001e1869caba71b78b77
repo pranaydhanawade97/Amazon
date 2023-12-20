@@ -1,0 +1,15 @@
+package Page_Object;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+public class TestCases4 {
+	
+	WebDriver Driver;
+	
+	public TestCases4(WebDriver Driver) {
+		this.Driver=Driver;
+		
+		PageFactory.initElements(Driver, this);
+	}
+}

@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 public class Login_Test {
 
 	
-		
+		//For Login Test Cases
 		WebDriver driver;
 		
 		@FindBy(xpath="//input[@name='email']")
@@ -23,6 +23,10 @@ public class Login_Test {
 		@FindBy(id="signInSubmit")
 		WebElement click;
 		
+		@FindBy(xpath="//a[@id='nav-hamburger-menu']")
+		WebElement dropdown;
+		
+		
 		public Login_Test(WebDriver driver) {
 			this.driver=driver;
 			
@@ -34,6 +38,7 @@ public class Login_Test {
 			button.click();
 			pwd.sendKeys(PwdVal);
 			click.click();
+			dropdown.click();
 		
 	}
 }

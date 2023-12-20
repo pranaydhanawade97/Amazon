@@ -1,44 +1,50 @@
 package Page_Object;
-
-
-
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+
+
 public class TestCases {
 	
 	WebDriver driver;
 	
-	@FindBy(xpath="(//select[@class='a-native-dropdown a-declarative'])[1]")
-	WebElement size;
+	@FindBy(xpath="(//span[@id='productTitle'])[1]")
+	WebElement text;
 	
+	@FindBy(xpath="//input[@id='add-to-cart-button']") //For Shoes add to Card Button
+	WebElement cart;
 	
-	@FindBy(xpath="//option[@id='native_size_name_3']")
-	WebElement no;
+	@FindBy(xpath="//a[@id='nav-logo-sprites']")       //Click on amazon Prime Logo
+	WebElement dropdown;
 	
-	@FindBy(xpath="//img[@alt='White/Red']")
-	WebElement color;
+	@FindBy(xpath="(//select[@id='searchDropdownBox'])[1]")  // click on drop down option
+	WebElement test;
 	
-	@FindBy(xpath="//select[@id='quantity']")
-	WebElement quantity;
+	@FindBy(xpath="//option[@value='search-alias=computers']")  //select value of computers
+	WebElement option;
 	
-	
-	
-	
-	public TestCases(WebDriver driver) {
+	public TestCases(WebDriver driver)   {
 		this.driver=driver;
 		
 		PageFactory.initElements(driver, this);
+		
 	}
 	
-	public void login2function()  {
-		size.click();
-		no.click();
-		color.click();
-		quantity.click();	
+	public void login2function() {
+		
+		System.out.println(text.getText());
+	
+		cart.click();
+
+		dropdown.click();
+		
+		test.click();
+		
+		option.click();
+	
+		
 		
 	}
 	

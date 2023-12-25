@@ -36,7 +36,7 @@ public class Home extends BaseClass {
 		//3.Login Amazon Webpage using Page Object Model
 		
 		Login_Test login = new Login_Test(driver);
-		login.Loginfunction("pranaydhanawade89.pd@hotmail.com","Access123#$");
+		login.Loginfunction("USer_ID","Password");
 		
 		//7.Drop Down Option 
 		WebElement dropdown=driver.findElement(By.xpath("//a[@id='nav-hamburger-menu']"));
